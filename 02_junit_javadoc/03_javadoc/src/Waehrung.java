@@ -1,16 +1,35 @@
-// TODO: JavaDoc
+/**
+ *
+ * Repraesentiert eine Waehrung.
+ *
+ * @author k.pettes
+ *
+ */
 public class Waehrung {
 
-    // TODO: JavaDoc
+
+    /**
+     * Gibt den aktuellen Kurs von Waehrung an.
+     */
+
     private final int kurs;
 
-    // TODO: JavaDoc
+    /**
+    * Gibt den Name der Waehrung an.
+    */
+
     private final String name;
 
-    // TODO: JavaDoc
+    /**
+    * Gibt das Kuerzel der Waehrung an.
+    */
+
     private final String kuerzel;
 
-    // TODO: JavaDoc
+    /**
+     * Setzt den Kurs auf einen gemeinsamen Teiler.
+     */
+
     private static final long TEILER = 10000;
 
     /**
@@ -26,7 +45,13 @@ public class Waehrung {
         this.kuerzel = kuerzel;
     }
 
-    // TODO: JavaDoc
+    /**
+     *
+     * @param betrag Betrag der Waehrung.
+     * @param toWaehrung
+     * @return
+     */
+
     public long umrechnen(long betrag, Waehrung toWaehrung) {
         return betrag * kurs / toWaehrung.kurs;
     }
@@ -35,7 +60,7 @@ public class Waehrung {
     public int getKurs() {
         return kurs;
     }
-    
+
     // TODO: JavaDoc
     public String getName() {
         return name;
