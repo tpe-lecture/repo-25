@@ -14,7 +14,7 @@ import de.smits_net.games.framework.sprite.Direction;
 public class Alien extends AnimatedSprite {
 
     /** Geschwindigkeit des Alien X-Richtung. */
-    private static final int ALIEN_SPEED = 2;
+    private static final int ALIEN_SPEED = 15;
 
     /**
      * Neues Alien anlegen.
@@ -22,11 +22,11 @@ public class Alien extends AnimatedSprite {
      * @param board das Spielfeld
      * @param startPoint Start-Position
      */
-    public Alien(Board board, Point startPoint) {
+    public Alien(Board board, Point startPoint, Direction direct) {
         super(board, startPoint, BoundaryPolicy.JUMP_BACK,
-                new AnimatedImage(50, 5,
-                        "assets/spike_fist_move_strip5.png"));
-        velocity.setVelocity(Direction.WEST, ALIEN_SPEED);
+                new AnimatedImage(50, 5, "assets/spike_fist_move_strip5.png"));
+        velocity.setVelocity(direct, ALIEN_SPEED);
+
     }
 
     /**
@@ -38,4 +38,13 @@ public class Alien extends AnimatedSprite {
                 new StripedImage("assets/explosion_1.png", 43)));
         setInvisibleAfterFrames(70);
     }
+
+    /**
+     * Alien explodiert wenn man mit der Maus darauf klickt.
+     */
+    public void mousePressed() {
+        this.explode();
+    }
+
+
 }
