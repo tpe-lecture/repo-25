@@ -1,4 +1,5 @@
-
+package bestellwesen;
+import stammdaten.Lieferant;
 
 /**
  * Ein Artikel aus dem Angebot der Firma.

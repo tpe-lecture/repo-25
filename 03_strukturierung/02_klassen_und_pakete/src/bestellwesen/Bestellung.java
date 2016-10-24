@@ -1,3 +1,6 @@
+package bestellwesen;
+import kunden.Kunde;
+
 /**
  * Eine Bestellung.
  */
