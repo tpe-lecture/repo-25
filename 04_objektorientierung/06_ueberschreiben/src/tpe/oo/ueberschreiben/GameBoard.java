@@ -20,7 +20,6 @@ public class GameBoard extends Board {
     private Alien alien4;
     private Alien alien5;
 
-
     /**
      * Erzeugt ein neues Board.
      */
@@ -73,5 +72,10 @@ public class GameBoard extends Board {
                 alien4.isVisible()||
                 alien5.isVisible();
 
+    }
+    @Override
+    protected void drawGameOver(Graphics g) {
+        // TODO Auto-generated method stub
+        super.drawGameOver(g);
     }
 }

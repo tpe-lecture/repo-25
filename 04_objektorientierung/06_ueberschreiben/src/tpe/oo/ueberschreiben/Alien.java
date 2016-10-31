@@ -14,7 +14,7 @@ import de.smits_net.games.framework.sprite.Direction;
 public class Alien extends AnimatedSprite {
 
     /** Geschwindigkeit des Alien X-Richtung. */
-    private static final int ALIEN_SPEED = 15;
+    private static final int ALIEN_SPEED = 5;
 
     /**
      * Neues Alien anlegen.
