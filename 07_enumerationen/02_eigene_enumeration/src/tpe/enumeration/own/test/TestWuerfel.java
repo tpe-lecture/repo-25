@@ -17,6 +17,9 @@ public class TestWuerfel {
     /**
      * Testet die Fairness.
      */
+    
+    
+    
     @Test
     public void testFairnessD4() {
         internalTestFairness(new Wuerfel(Wuerfel.D4), 2.5);

@@ -6,6 +6,7 @@ import de.smits_net.games.framework.board.Board;
 import de.smits_net.games.framework.image.AnimatedImage;
 import de.smits_net.games.framework.sprite.AnimatedSprite;
 import de.smits_net.games.framework.sprite.Direction;
+import de.smits_net.games.framework.sprite.Sprite;
 
 /**
  * Ein Sprite.
@@ -22,9 +23,9 @@ public class Professor extends AnimatedSprite {
      * @param startPoint Start-Position
      */
     public Professor(Board board, Point startPoint) {
-        super(board, startPoint, BoundaryPolicy.NONE,
-                new AnimatedImage(50, 9,
-                        "assets/professor_left"));
+        super(board, startPoint, BoundaryPolicy.JUMP_BACK,
+                new AnimatedImage(50, 9, "assets/professor_left"));
         velocity.setVelocity(Direction.WEST, SPRITE_SPEED);
     }
+
 }
